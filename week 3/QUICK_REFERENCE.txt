@@ -363,7 +363,7 @@ python -c "import torch; print(f'CUDA: {torch.cuda.is_available()}')"
 pip install openai-whisper[large]
 
 # Set HF token
-$env:HF_TOKEN = "hf_xxxxxxxxxxxx"
+$env:HF_TOKEN = "<YOUR_HF_TOKEN>"
 
 ═════════════════════════════════════════════════════════════════════════════
 

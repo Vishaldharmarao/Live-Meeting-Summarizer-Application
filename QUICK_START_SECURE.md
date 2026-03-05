@@ -22,17 +22,17 @@ Choose ONE method based on your platform:
 
 #### Linux/macOS
 ```bash
-export HF_TOKEN="hf_xxxxxxxxxxxxxxxxxxxx"
+export HF_TOKEN="<YOUR_HF_TOKEN>"
 ```
 
 #### Windows PowerShell
 ```powershell
-$env:HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"
+$env:HF_TOKEN = "<YOUR_HF_TOKEN>"
 ```
 
 #### Windows Command Prompt
 ```cmd
-set HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
+set HF_TOKEN=<YOUR_HF_TOKEN>
 ```
 
 **Get real token:** https://huggingface.co/settings/tokens
@@ -50,7 +50,7 @@ cp "week 3/.env.example" .env
 
 Edit `.env` with your real token:
 ```
-HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
+HF_TOKEN=<YOUR_HF_TOKEN>
 ```
 
 ---
@@ -106,7 +106,7 @@ python "week 3/main.py"
 # [with setup instructions]
 
 # Check 2: With token (should proceed)
-$env:HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"  # or export on Linux/macOS
+$env:HF_TOKEN = "<YOUR_HF_TOKEN>"  # or export on Linux/macOS
 python "week 3/main.py"
 # Should proceed to load models
 ```
