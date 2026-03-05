@@ -1,0 +1,35 @@
+# Example RTTM (Rich Transcription Time Marked) Reference File
+# Place this in annotations/reference.rttm
+# Format: RTTM 1.2 specification
+#
+# Each line format:
+# SPEAKER <filename> <channel> <start-time> <duration> <confidence> <speaker-id> <speech-type> <speech-mode>
+#
+# Example for ES2002a meeting:
+# - Filename: ES2002a.Mix-Headset.wav (or just ES2002a)
+# - Channel: 1 (main channel)
+# - Start-time: seconds from start
+# - Duration: duration in seconds
+# - Confidence: always <NA>
+# - Speaker-id: unique speaker identifier (e.g., SPK0001)
+# - Speech-type: always <NA> for diarization
+# - Speech-mode: always <NA> for diarization
+
+SPEAKER ES2002a 1 0.000 5.230 <NA> SPK0001 <NA> <NA>
+SPEAKER ES2002a 1 5.230 3.890 <NA> SPK0002 <NA> <NA>
+SPEAKER ES2002a 1 9.120 4.450 <NA> SPK0001 <NA> <NA>
+SPEAKER ES2002a 1 13.570 2.120 <NA> SPK0003 <NA> <NA>
+SPEAKER ES2002a 1 15.690 3.850 <NA> SPK0002 <NA> <NA>
+SPEAKER ES2002a 1 19.540 1.760 <NA> SPK0001 <NA> <NA>
+SPEAKER ES2002a 1 21.300 2.240 <NA> SPK0003 <NA> <NA>
+SPEAKER ES2002a 1 23.540 4.120 <NA> SPK0002 <NA> <NA>
+
+# Tool: Generate RTTM with Audacity + PyAnnote export plugin
+# Or manually time each speaker turn from reference transcript
+#
+# Import tools:
+#   from pyannote.database.util import load_rttm
+#   rttm = load_rttm("annotations/reference.rttm")
+#
+# When reference.rttm exists in annotations/ folder,
+# the main.py script will automatically compute DER (Diarization Error Rate)

@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.dll
+*.bin
+*.pt
+*.wav
+
+# Environment variables - NEVER commit .env files that contain secrets!
+.env
+.env.local
+.env.*.local
