@@ -18,9 +18,9 @@ This report documents a comprehensive security audit of the Live-Meeting-Summari
 ### Tokens Found
 | Location | Token | Status | Replacement |
 |----------|-------|--------|------------|
-| `week 3/main.py` line 156 | `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` | ✅ REMOVED | Environment variable |
-| `SECURITY_REFACTOR_SUMMARY.md` line 27 | `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` | ✅ REPLACED | Safe placeholder |
-| `SECURITY_REFACTOR_SUMMARY.md` line 162 | `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` | ✅ REPLACED | Safe placeholder |
+| `week 3/main.py` line 156 | `<HF_TOKEN>` | ✅ REMOVED | Environment variable |
+| `SECURITY_REFACTOR_SUMMARY.md` line 27 | `<HF_TOKEN>` | ✅ REPLACED | Safe placeholder |
+| `SECURITY_REFACTOR_SUMMARY.md` line 162 | `<HF_TOKEN>` | ✅ REPLACED | Safe placeholder |
 
 ### Scan Update
 ✅ Comprehensive search performed across entire repository for pattern: `hf_[a-zA-Z0-9]{20,}`  
@@ -36,7 +36,7 @@ This report documents a comprehensive security audit of the Live-Meeting-Summari
 #### File: `week 3/main.py`
 **Before (❌ Insecure):**
 ```python
-hf_token = "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"  # Hardcoded token exposed!
+hf_token = "<HF_TOKEN>"  # Hardcoded token exposed!
 if not hf_token:
     logger.warning("HF_TOKEN not set. Using anonymous access.")
 ```
@@ -56,11 +56,11 @@ if not hf_token:
         "The Hugging Face token is required to download the diarization model.\n\n"
         "To set it, run one of the following commands:\n\n"
         "Linux/macOS:\n"
-        "  export HF_TOKEN='<YOUR_HF_TOKEN>'\n\n"
+        "  export HF_TOKEN='<HF_TOKEN>'\n\n"
         "Windows (PowerShell):\n"
-        "  $env:HF_TOKEN = '<YOUR_HF_TOKEN>'\n\n"
+        "  $env:HF_TOKEN = '<HF_TOKEN>'\n\n"
         "Windows (Command Prompt):\n"
-        "  set HF_TOKEN=<YOUR_HF_TOKEN>\n\n"
+        "  set HF_TOKEN=<HF_TOKEN>\n\n"
         "To get your token:\n"
         "  1. Go to https://huggingface.co/settings/tokens\n"
         "  2. Create a new token with 'read' permissions\n"
@@ -84,7 +84,7 @@ logger.info("HF_TOKEN loaded securely from environment variable.")
 - ✅ Verified placeholder usage is safe (hf_xxxx format already in place)
 
 #### File: `week 3/.env.example`
-- ✅ Verified contains placeholder only: `hf_xxxxxxxxxxxxxxxxxxxxxxxxxx`
+- ✅ Verified contains placeholder only: `<HF_TOKEN>`
 - ✅ Clear instructions to copy and fill in actual token
 
 #### File: `.gitignore`
@@ -123,15 +123,15 @@ hf_token = "<YOUR_HF_TOKEN>"  # Even this is unsafe if it were a real token
 Users must set the token before running:
 ```bash
 # Linux/macOS
-export HF_TOKEN='<YOUR_HF_TOKEN>'
+export HF_TOKEN='<HF_TOKEN>'
 python week\ 3/main.py
 
 # Windows PowerShell
-$env:HF_TOKEN = '<YOUR_HF_TOKEN>'
+$env:HF_TOKEN = '<HF_TOKEN>'
 python "week 3/main.py"
 
 # Windows Command Prompt
-set HF_TOKEN=<YOUR_HF_TOKEN>
+set HF_TOKEN=<HF_TOKEN>
 python "week 3/main.py"
 ```
 
