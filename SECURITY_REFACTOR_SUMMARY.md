@@ -53,11 +53,11 @@ if not hf_token:
         "The Hugging Face token is required to download the diarization model.\n\n"
         "To set it, run one of the following commands:\n\n"
         "Linux/macOS:\n"
-        "  export HF_TOKEN='your_huggingface_token_here'\n\n"
+        "  export HF_TOKEN='hf_xxxxxxxxxxxxxxxxxxxx'\n\n"
         "Windows (PowerShell):\n"
-        "  $env:HF_TOKEN = 'your_huggingface_token_here'\n\n"
+        "  $env:HF_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxx'\n\n"
         "Windows (Command Prompt):\n"
-        "  set HF_TOKEN=your_huggingface_token_here\n\n"
+        "  set HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx\n\n"
         "To get your token:\n"
         "  1. Go to https://huggingface.co/settings/tokens\n"
         "  2. Create a new token with 'read' permissions\n"
@@ -108,10 +108,12 @@ cp week\ 3/.env.example .env
 2. Create a new token with **read** permissions
 3. Copy the token (format: `hf_xxxxxxxxxxxxxxxxxxxx`)
 
+(Use environment variable `HF_TOKEN` rather than hardcoding.)
+
 ### Step 3: Set the Token in .env
 Open `.env` and replace the placeholder:
 ```env
-HF_TOKEN=hf_your_actual_token_here
+HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
 CUDA_VISIBLE_DEVICES=0
 ```
 
@@ -127,19 +129,19 @@ load_dotenv()  # Loads variables from .env file
 
 Linux/macOS:
 ```bash
-export HF_TOKEN='hf_your_token_here'
+export HF_TOKEN='hf_xxxxxxxxxxxxxxxxxxxx'
 python week\ 3/main.py
 ```
 
 Windows (PowerShell):
 ```powershell
-$env:HF_TOKEN = 'hf_your_token_here'
+$env:HF_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxx'
 python "week 3/main.py"
 ```
 
 Windows (Command Prompt):
 ```cmd
-set HF_TOKEN=hf_your_token_here
+set HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
 python "week 3/main.py"
 ```
 
@@ -207,11 +209,11 @@ To verify the refactored code works correctly:
 2. **With token set**:
    ```bash
    # Linux/macOS
-   export HF_TOKEN='hf_your_token'
+   export HF_TOKEN='hf_xxxxxxxxxxxxxxxxxxxx'
    python week\ 3/main.py
    
    # Windows PowerShell
-   $env:HF_TOKEN = 'hf_your_token'
+   $env:HF_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxx'
    python "week 3/main.py"
    ```
 

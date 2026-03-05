@@ -50,7 +50,7 @@ cp "week 3/.env.example" .env
 
 Edit `.env` with your real token:
 ```
-HF_TOKEN=hf_your_actual_token_here
+HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
 ```
 
 ---
@@ -128,7 +128,7 @@ It means you need to set the token before running. Follow the instructions in th
 
 ### Local Development
 ```bash
-export HF_TOKEN="your_token"  # Save in terminal session
+export HF_TOKEN="hf_xxxxxxxxxxxxxxxxxxxx"  # Save in terminal session
 python "week 3/main.py"
 ```
 

@@ -247,7 +247,7 @@ python "week 3/main.py"
 
 3. Edit `.env` and replace placeholder:
    ```env
-   HF_TOKEN=hf_your_actual_token
+   HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
    ```
 
 4. Run the script (will load from .env automatically if using python-dotenv):
