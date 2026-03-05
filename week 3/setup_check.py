@@ -100,8 +100,8 @@ def check_hf_token():
     else:
         print(f"  ⓘ HF_TOKEN not set (optional)")
         print(f"\n  To set HF_TOKEN:")
-        print(f"    PowerShell: $env:HF_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxx'")
-        print(f"    Cmd:       set HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx")
+        print(f"    PowerShell: $env:HF_TOKEN = '<YOUR_HF_TOKEN>'")
+        print(f"    Cmd:       set HF_TOKEN=<YOUR_HF_TOKEN>")
         return True  # Not required, just helpful
 
 def check_gpu():

@@ -16,8 +16,8 @@
 | File | Token | Action |
 |------|-------|--------|
 | `week 3/main.py` | `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` | ✅ **REMOVED** - Replaced with env var |
-| `SECURITY_REFACTOR_SUMMARY.md` line 27 | `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` | ✅ **REPLACED** with `hf_xxxxxxxxxxxxxxxxxxxx` |
-| `SECURITY_REFACTOR_SUMMARY.md` line 162 | `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` | ✅ **REPLACED** with `hf_xxxxxxxxxxxxxxxxxxxx` |
+| `SECURITY_REFACTOR_SUMMARY.md` line 27 | `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` | ✅ **REPLACED** with `<YOUR_HF_TOKEN>` |
+| `SECURITY_REFACTOR_SUMMARY.md` line 162 | `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` | ✅ **REPLACED** with `<YOUR_HF_TOKEN>` |
 
 ### 📝 Documentation Standardization
 - ✅ Updated `week 3/README.md` - All examples now use safe placeholders
@@ -76,7 +76,7 @@ if not hf_token:
 
 ### Template (.env.example)
 ```
-HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxx
+HF_TOKEN=<YOUR_HF_TOKEN>
 ```
 
 ---

@@ -56,11 +56,11 @@ if not hf_token:
         "The Hugging Face token is required to download the diarization model.\n\n"
         "To set it, run one of the following commands:\n\n"
         "Linux/macOS:\n"
-        "  export HF_TOKEN='hf_xxxxxxxxxxxxxxxxxxxx'\n\n"
+        "  export HF_TOKEN='<YOUR_HF_TOKEN>'\n\n"
         "Windows (PowerShell):\n"
-        "  $env:HF_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxx'\n\n"
+        "  $env:HF_TOKEN = '<YOUR_HF_TOKEN>'\n\n"
         "Windows (Command Prompt):\n"
-        "  set HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx\n\n"
+        "  set HF_TOKEN=<YOUR_HF_TOKEN>\n\n"
         "To get your token:\n"
         "  1. Go to https://huggingface.co/settings/tokens\n"
         "  2. Create a new token with 'read' permissions\n"
@@ -76,7 +76,7 @@ logger.info("HF_TOKEN loaded securely from environment variable.")
 ### B. Documentation Updates
 
 #### File: `week 3/README.md`
-- ✅ Standardized all example tokens to safe placeholder: `hf_xxxxxxxxxxxxxxxxxxxx`
+- ✅ Standardized all example tokens to safe placeholder: `<YOUR_HF_TOKEN>`
 - ✅ Updated setup instructions with environment variable guidance
 - ✅ Updated troubleshooting section with HF_TOKEN setup examples
 
@@ -108,7 +108,7 @@ import os
 hf_token = os.getenv("HF_TOKEN")
 
 # ❌ NEVER DO THIS: Hardcode tokens
-hf_token = "hf_xxxxxxxxxxxxxxxxxxxx"  # Even this is unsafe if it were a real token
+hf_token = "<YOUR_HF_TOKEN>"  # Even this is unsafe if it were a real token
 ```
 
 ### .gitignore Rules
@@ -123,15 +123,15 @@ hf_token = "hf_xxxxxxxxxxxxxxxxxxxx"  # Even this is unsafe if it were a real to
 Users must set the token before running:
 ```bash
 # Linux/macOS
-export HF_TOKEN='hf_xxxxxxxxxxxxxxxxxxxx'
+export HF_TOKEN='<YOUR_HF_TOKEN>'
 python week\ 3/main.py
 
 # Windows PowerShell
-$env:HF_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxx'
+$env:HF_TOKEN = '<YOUR_HF_TOKEN>'
 python "week 3/main.py"
 
 # Windows Command Prompt
-set HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
+set HF_TOKEN=<YOUR_HF_TOKEN>
 python "week 3/main.py"
 ```
 
@@ -203,9 +203,9 @@ Expected output: Error message explaining HF_TOKEN is not set, with setup instru
 ### Check 4: Test Code Runner With Token
 ```bash
 # Set token
-$env:HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"  # Windows PowerShell
+$env:HF_TOKEN = "<YOUR_HF_TOKEN>"  # Windows PowerShell
 # OR
-export HF_TOKEN="hf_xxxxxxxxxxxxxxxxxxxx"  # Linux/macOS
+export HF_TOKEN="<YOUR_HF_TOKEN>"  # Linux/macOS
 
 # Run script - should proceed to next step
 python "week 3/main.py"
@@ -247,7 +247,7 @@ python "week 3/main.py"
 
 3. Edit `.env` and replace placeholder:
    ```env
-   HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxx
+   HF_TOKEN=<YOUR_HF_TOKEN>
    ```
 
 4. Run the script (will load from .env automatically if using python-dotenv):
