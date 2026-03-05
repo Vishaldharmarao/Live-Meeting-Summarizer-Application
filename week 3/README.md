@@ -57,12 +57,12 @@ Download from **[AMI Corpus](https://groups.inf.ed.ac.uk/ami/corpus/)**:
 
 For faster model downloads and access to all models:
 ```powershell
-$env:HF_TOKEN = "your_huggingface_token_here"
+$env:HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"
 ```
 
 Or set it permanently in Windows:
 ```powershell
-[Environment]::SetEnvironmentVariable("HF_TOKEN", "your_token", "User")
+[Environment]::SetEnvironmentVariable("HF_TOKEN", "hf_xxxxxxxxxxxxxxxxxxxx", "User")
 ```
 
 ### 5. **Run the Pipeline**
@@ -262,7 +262,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 ### Issue: "HF_TOKEN not set - using anonymous access"
 **Solution:** Set environment variable:
 ```powershell
-$env:HF_TOKEN = "hf_xxxxxxxxxxxx"
+$env:HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"
 ```
 
 ### Issue: Model download fails
