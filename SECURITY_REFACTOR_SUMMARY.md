@@ -24,7 +24,7 @@ This document summarizes the security improvements made to remove hardcoded API 
 ```python
 # Load pyannote diarization model
 logger.info(f"Loading diarization model: {Config.DIARIZATION_MODEL}")
-hf_token = "<YOUR_HF_TOKEN>"  # ❌ HARDCODED TOKEN!
+hf_token = "<HF_TOKEN>"  # ❌ HARDCODED TOKEN!
 if not hf_token:
     logger.warning("HF_TOKEN not set. Using anonymous access.")
 
@@ -53,11 +53,11 @@ if not hf_token:
         "The Hugging Face token is required to download the diarization model.\n\n"
         "To set it, run one of the following commands:\n\n"
         "Linux/macOS:\n"
-        "  export HF_TOKEN='<YOUR_HF_TOKEN>'\n\n"
+        "  export HF_TOKEN='<HF_TOKEN>'\n\n"
         "Windows (PowerShell):\n"
-        "  $env:HF_TOKEN = '<YOUR_HF_TOKEN>'\n\n"
+        "  $env:HF_TOKEN = '<HF_TOKEN>'\n\n"
         "Windows (Command Prompt):\n"
-        "  set HF_TOKEN=<YOUR_HF_TOKEN>\n\n"
+        "  set HF_TOKEN=<HF_TOKEN>\n\n"
         "To get your token:\n"
         "  1. Go to https://huggingface.co/settings/tokens\n"
         "  2. Create a new token with 'read' permissions\n"
@@ -106,14 +106,14 @@ cp week\ 3/.env.example .env
 ### Step 2: Get Your Hugging Face Token
 1. Visit: https://huggingface.co/settings/tokens
 2. Create a new token with **read** permissions
-3. Copy the token (format: `<YOUR_HF_TOKEN>`)
+3. Copy the token (format: `<HF_TOKEN>`)
 
 (Use environment variable `HF_TOKEN` rather than hardcoding.)
 
 ### Step 3: Set the Token in .env
 Open `.env` and replace the placeholder:
 ```env
-HF_TOKEN=<YOUR_HF_TOKEN>
+HF_TOKEN=<HF_TOKEN>
 CUDA_VISIBLE_DEVICES=0
 ```
 
@@ -129,19 +129,19 @@ load_dotenv()  # Loads variables from .env file
 
 Linux/macOS:
 ```bash
-export HF_TOKEN='<YOUR_HF_TOKEN>'
+export HF_TOKEN='<HF_TOKEN>'
 python week\ 3/main.py
 ```
 
 Windows (PowerShell):
 ```powershell
-$env:HF_TOKEN = '<YOUR_HF_TOKEN>'
+$env:HF_TOKEN = '<HF_TOKEN>'
 python "week 3/main.py"
 ```
 
 Windows (Command Prompt):
 ```cmd
-set HF_TOKEN=<YOUR_HF_TOKEN>
+set HF_TOKEN=<HF_TOKEN>
 python "week 3/main.py"
 ```
 
@@ -161,7 +161,7 @@ import os
 token = os.getenv("HF_TOKEN")
 
 # Bad: Hardcoded
-token = "<YOUR_HF_TOKEN>"
+token = "<HF_TOKEN>"
 ```
 
 ### 3. **.env Files**

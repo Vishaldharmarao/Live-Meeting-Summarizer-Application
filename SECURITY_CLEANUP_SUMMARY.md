@@ -15,9 +15,9 @@
 ### 🗑️ Token Removal & Replacement
 | File | Token | Action |
 |------|-------|--------|
-| `week 3/main.py` | `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` | ✅ **REMOVED** - Replaced with env var |
-| `SECURITY_REFACTOR_SUMMARY.md` line 27 | `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` | ✅ **REPLACED** with `<YOUR_HF_TOKEN>` |
-| `SECURITY_REFACTOR_SUMMARY.md` line 162 | `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` | ✅ **REPLACED** with `<YOUR_HF_TOKEN>` |
+| `week 3/main.py` | `<HF_TOKEN>` | ✅ **REMOVED** - Replaced with env var |
+| `SECURITY_REFACTOR_SUMMARY.md` line 27 | `<HF_TOKEN>` | ✅ **REPLACED** with `<HF_TOKEN>` |
+| `SECURITY_REFACTOR_SUMMARY.md` line 162 | `<HF_TOKEN>` | ✅ **REPLACED** with `<HF_TOKEN>` |
 
 ### 📝 Documentation Standardization
 - ✅ Updated `week 3/README.md` - All examples now use safe placeholders
@@ -35,7 +35,7 @@
 
 ### ✅ Scan Summary
 ```
-Search: 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
+Search: <HF_TOKEN>
 Results: 4 matches (all in SECURITY_AUDIT_REPORT.md documentation only)
 Status: ✅ Token removed from active code
 ```
@@ -98,7 +98,7 @@ The repository is now ready to push to GitHub because:
 
 ```bash
 # 1. Verify no real tokens remain
-grep -r "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" . --exclude-dir=.git
+grep -r "<HF_TOKEN>" . --exclude-dir=.git
 
 # 2. Confirm .env is ignored
 git check-ignore .env
@@ -107,7 +107,7 @@ git check-ignore .env
 python "week 3/main.py"
 
 # 4. Test code with token
-$env:HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"  # PowerShell
+$env:HF_TOKEN = "<HF_TOKEN>"  # PowerShell
 python "week 3/main.py"
 ```
 
