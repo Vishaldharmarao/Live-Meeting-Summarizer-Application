@@ -24,7 +24,7 @@ This document summarizes the security improvements made to remove hardcoded API 
 ```python
 # Load pyannote diarization model
 logger.info(f"Loading diarization model: {Config.DIARIZATION_MODEL}")
-hf_token = "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"  # ❌ HARDCODED TOKEN!
+hf_token = "hf_xxxxxxxxxxxxxxxxxxxx"  # ❌ HARDCODED TOKEN!
 if not hf_token:
     logger.warning("HF_TOKEN not set. Using anonymous access.")
 
@@ -159,7 +159,7 @@ import os
 token = os.getenv("HF_TOKEN")
 
 # Bad: Hardcoded
-token = "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"
+token = "hf_xxxxxxxxxxxxxxxxxxxx"
 ```
 
 ### 3. **.env Files**
