@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+venv310/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project-specific
+*.log
+speaker_diarization.log
+*.wav
+*.mp3
+audio/meeting.wav
+output/final_transcript.txt
+output/transcript_metadata.json
+.ipynb_checkpoints
+
+# Cache
+.cache/
+*.cache
+
+# Models (will be downloaded)
+models/
+pretrained/
+
+# Temporary files
+*.tmp
+temp_*
+~*
+
+# OS
+Thumbs.db
+.DS_Store
+.Spotlight-V100
+.Trashes

@@ -1,0 +1,95 @@
+# .gitignore for Speech-to-Text Evaluation System
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv
+.env
+.virtualenv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# Data and Models
+data/raw_librispeech/
+data/audio/
+data/transcripts/
+models/vosk-model-small-en-us-0.15/
+
+# Outputs
+outputs/
+*.txt
+evaluation_report.txt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+*.cache
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Large files
+*.wav
+*.flac
+*.mp3
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary
+temp/
+tmp/
+*.temp
+
+# Local configuration (overrides)
+config.local.py
+.env.local
+
+# Development
+node_modules/
+package-lock.json
+yarn.lock
