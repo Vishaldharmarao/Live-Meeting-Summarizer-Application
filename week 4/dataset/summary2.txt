@@ -1,0 +1,11 @@
+Meeting Summary
+
+Key Points:
+- Sprint tasks were reviewed.
+- There is an API token issue blocking progress.
+
+Decisions:
+- Debug the auth flow after lunch.
+
+Action Items:
+- Speaker 3: Help debug the authentication flow.
