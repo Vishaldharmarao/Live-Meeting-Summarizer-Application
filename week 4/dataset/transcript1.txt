@@ -1,0 +1,3 @@
+[Speaker 1]: Let's discuss next quarter goals.
+[Speaker 2]: We should increase sales by 20%.
+[Speaker 1]: Marketing campaigns can help achieve this.

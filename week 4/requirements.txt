@@ -1,0 +1,7 @@
+groq
+transformers
+torch
+rouge-score
+nltk
+python-dotenv
+requests
